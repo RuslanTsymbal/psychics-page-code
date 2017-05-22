@@ -1,0 +1,890 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../node_modules/node-normalize-scss/normalize";
+
+/*files*/
+@import "variables.scss";
+
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-family-Roboto;
+	line-height: $line-height-18;
+}
+
+.container-fluid {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.category-title{
+	text-align: center;
+   color: $color-title-section;
+	font-size: $font-size-30;
+	font-weight: $font-weight-500;
+	text-transform: uppercase;
+	margin: 0;
+	padding-top: 5.7rem;
+	padding-bottom: 1.9rem;
+}
+
+.category-description{
+	display: block;
+	text-align: center;
+   color: $color-description-section;
+   font-size: $font-size-20;
+   font-weight: $font-weight-400;
+   line-height: $line-height-18;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+@-moz-document url-prefix() { 
+   .psychics-description {
+   	margin-top: -2.8rem;
+   }
+ } 
+
+/*----------#wrapper-moble------------------*/
+
+#wrapper-mobile{
+	display: none;
+	padding-left: 0.4rem;
+
+	.dropdown-toggle{
+		background-color: $color-nav-bg;
+		border: none;
+		left: 18px;
+		box-shadow: none;
+	}
+
+	.dropdown-toggle:active{
+		box-shadow: none;
+	}
+
+	.dropdown-toggle:hover{
+		color: #444562;
+		transition: 0.5s;
+	}
+
+	.dropdown-menu{
+		background-color: $color-nav-bg;
+		border: none;
+		padding-left: 0.2rem;
+		min-width: 100px;
+		text-align: center;
+		left: 6px;
+		padding-top: 15px;
+		box-shadow: none;
+
+		a{
+			display: block;
+			margin-bottom: 1.2rem;
+			color: $color-white;
+		}
+
+		a:hover{
+			color: #444562;
+			transition: 0.5s;
+		}
+
+		a:focus{
+			color: #444562;
+			transition: 0.5s;
+		}
+	}
+
+	.dropdown-toggle:hover .dropdown-menu {
+   	display: block;
+   }
+
+	.dropdown-toggle::after {
+	    display: inline-block;
+	    width: 0;
+	    height: 0;
+	    margin-left: 0.3em;
+	    vertical-align: middle;
+	    content: "";
+	    border-top: 0.3em solid;
+	    border-right: 0.3em solid transparent;
+	    border-left: 0.3em solid transparent;
+	}
+}
+
+/*---.footer-menu-mobile----*/
+
+.footer-menu-mobile{
+	display: none;
+}
+
+/*----------------------#header---------------------------*/
+
+#header {
+	.header-top {
+		background-color:  $color-header-bg-top;
+      padding-bottom: 10px;
+   }
+
+   .header-logo{
+		max-width: 300px;
+      float: left;
+      padding-top: 1rem;
+   }
+
+	.header-search {
+		padding-top: 3rem;
+		margin-left: 7.4%;
+		width: 45.7%;
+		overflow: hidden;
+		float: left;
+		form{
+			width: 100%;
+			overflow: hidden;
+			input{
+				float: left;
+				width: 92%;
+				border-radius: 3px 0 0 3px;
+				border: none;
+				display: block;
+				height: 32px;
+				padding-left: 4%;
+				color: $color-text-search;
+				font-size: $font-size-14;
+		   }
+			.header-search-btn {
+				background-color:  $color-header-button;
+				border: none;
+				height: 32px;
+				padding-right: 11px;
+				padding-left: 11px;
+				display: inherit;
+				border-radius: 0 3px 3px 0;
+			}
+			.header-search-btn:hover{
+				opacity: 0.8;
+				color: $color-grey;
+			}	
+		}
+	}
+
+	.header-registration{
+		overflow: hidden;
+		padding-left: 2.3%;
+		padding-right: 0;
+		padding-top: 30px;
+		font-size: $font-size-14;
+				
+	   button:hover{
+        color: $color-header-button;
+        transition: 0.5s;
+		}
+		button:focus{
+		   outline-color: $color-header-bg-top;
+		   outline: -webkit-focus-ring-color $color-header-bg-top 5px;
+		}
+		button:nth-child(1),
+		button:nth-child(2){
+			padding-top: 10px;
+		}
+		button:nth-child(1){
+			margin-right: 12%;
+			float: left;
+		}	
+
+		.header-registration-btn{
+			display: inline-block;
+			color:#efeeef;
+			background-color: $color-header-bg-top;
+			border: none;
+			padding-left: 0;
+		   padding-right: 0;
+		}
+		.btn-right{
+         color: #f5f5f8;
+         background-color: $color-header-button-right;
+         padding: 8px 24px 8px 24px;
+         border-radius: 4px;
+         float: right;
+         border: none;
+		}
+		.btn-right:hover{
+			color: $color-header-button;
+			transition: 0.5s;
+			opacity: 0.9;
+		}
+	}
+}
+
+/*---------------------nav----------------------*/
+
+nav{
+	background-color: $color-nav-bg;
+	padding: 2rem 0 2rem 0;
+
+	#wrapper{
+		max-width: 867px;
+		margin: 0 auto;
+		ul{
+			padding-left: 0;
+			margin-bottom: 0;
+			text-align: justify;
+         overflow: hidden;
+         height: 20px;
+			li{
+				list-style-type: none;
+				display: inline;
+				a{
+					font-size: $font-size-16;
+					font-weight: $font-weight-700;
+					color: $color-white;
+					display: inline-block;
+				}
+				a:hover{
+					color: #444562;
+					transition: 0.5s;
+			   }
+			   a:focus{
+			   	color: #444562;
+			   	text-decoration: none;
+			   }
+			}
+			li:nth-last-child(1){
+				margin-right: 0;
+			}
+	   }
+	   ul:after {
+			content: "1";
+			margin-left: 100%;
+			display: inline-block;
+		}
+	}
+}
+
+/*---------------------#banner------------------------------*/
+
+#banner{
+	background-image: url("../img/banner-bg.jpg");
+	background-size: cover;
+   background-position: 50% 100%;
+   padding-top: 2.4rem;
+   height: 493px;
+   .banner-text{
+   	float: left;
+   	width: 70%;
+   	line-height: $line-height-60;
+   	p{
+			text-shadow: 0 -1px 2px #161729;
+			color: $color-white;
+			font-family: $font-family-Halant;
+			font-size: $font-size-48;
+			font-weight: bold;
+			max-width: 549px;
+			padding-top: 104px;
+	   }
+   }
+   .banner-img{
+   	overflow: hidden;
+   }
+
+   .banner-search{
+   	max-width: 700px;
+   	margin: 0 auto;
+   	padding: 5px 0 5px 0;
+     	input{
+   		padding: 18px 38.8% 18px 4%;
+   		color: #999999;
+   		color: $color-text-search;
+			font-size: $font-size-14;
+         font-weight: $font-weight-400;
+         border-radius: 3px;
+         border: none;
+   	}
+   	button{
+   		padding: 19px 40px 19px 40px;
+   		background-color: $color-header-button;
+   		border: none;
+   		color: $color-white;
+			font-size: $font-size-18;
+			font-weight: $font-weight-400;
+			margin-left: 27px;
+			border-radius: 3px;
+   	}
+   }
+
+	.banner-search{
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 5px 0 5px 0;
+		position: relative;
+	   top: -21.8rem;
+	   display: flex;
+      justify-content: center;
+
+	  	input{
+			padding: 2rem 28rem 2rem 19px;
+			color: #999999;
+			color: $color-text-search;
+			font-size: $font-size-14;
+	      font-weight: $font-weight-400;
+	      border-radius: 3px;
+	      border: none;
+		}
+		button{
+			padding: 1.8rem 4rem 1.8rem 4rem;
+			background-color: $color-header-button;
+			border: none;
+			color: $color-white;
+			font-size: $font-size-18;
+			font-weight: $font-weight-400;
+			margin-left: 2.7rem;
+			border-radius: 3px;
+		}
+		button:hover{
+			transition: 0.5s;
+         color: $color-header-button;
+         background-color: $color-header-button-right;
+		}
+	}
+
+	.banner-black{
+	   	background-color: black;
+	   	opacity: 0.5;
+	   	padding: 6.1rem 0 6.1rem 0;
+	   	position: relative;
+	      top: -12.2rem;
+	}
+}
+
+
+/*-----------------------#categories-------------------------------*/
+
+#categories{
+	overflow: hidden;
+   font-family: $font-family-Halant;
+   padding-bottom: 5rem;
+  	.list-categories{
+  		margin-top: 34px;
+  		overflow: hidden;
+  		display: flex;
+  		justify-content: space-between;
+
+  		.category{
+			overflow: hidden;
+			margin-right: 20px;
+
+			.title-category{
+				text-align: center;
+				padding: 1.7rem 0 1.7rem 0;
+				background-color: $color-nav-bg;
+				a{
+					color: $color-title-section;
+					font-size: $font-size-20;
+					font-weight: $font-weight-400;
+					text-transform: uppercase;
+				}
+				a:hover{
+					color: $color-header-button-right;
+					transition: 0.5s;
+					font-weight: 700;
+				}
+	   	}
+
+			img{
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.category:nth-child(4){
+				margin-right: 0;
+		}
+   }
+}
+
+/*------------------------#featured-psychics--------------------------*/ 
+
+#featured-psychics,
+#popular-psychics{
+	background-color: $color-psychics-bg;
+}
+
+.psychics-list{
+	padding-top: 3.6rem;
+	overflow: hidden;
+	display: flex;
+   justify-content: space-between;
+}
+
+.psychics-cell:nth-child(5){
+	margin-right: 0;
+}
+.psychics-cell{
+	margin-right: 20px;
+	padding-bottom: 20px;
+	overflow: hidden;
+	background-color: $color-psychics-cell;
+	.psychics-name{
+		text-align: center;
+		padding: 13px 0 13px 0;
+		a{
+			color: $color-white;
+			font-family: $font-family-Halant;
+			font-size: $font-size-20;
+			font-weight: $font-weight-400;
+			text-transform: uppercase;
+		}
+		a:hover{
+			color: $color-header-button;
+			font-weight: 700;
+		}
+	}
+	.psychics-img{
+		overflow: hidden;
+		img{
+			display: block;
+			width: 100%;
+			}
+		.psychics-black{
+			background-color: black;
+	   	opacity: 0.5;
+	   	padding: 15px 0 15px 0;
+	   	position: relative;
+	   	top: -30px;
+	   	margin-bottom: -30px;
+		}
+		.communicate{
+		   position: relative;
+		   top: -30px;
+		   height: 30px;
+		   margin-bottom: -30px;
+			
+       	.communicate-call{
+       		overflow: hidden;
+       		height: 30px;
+       		float: left;
+       		width: 50%;
+       		border-right: 1px solid $color-text-communicate;
+       		display: flex;
+            align-items: center;
+       		a{
+             	span{
+       				color: $color-text-communicate;
+       				display: block;
+       				padding-top: 1px;
+       				font-size: $font-size-14;
+						font-weight: $font-weight-400;
+       			}
+      			i{
+       				display: block;
+					   float: left;
+					   font-size: $font-size-14;
+					   padding: 3px 4px 3px 4px;
+					   border-radius: 10px;
+					   color: #1f1515;
+					   background-color: $color-communicate-icons;
+					   margin-left: 10px;
+					   margin-right: 10px;
+				   }
+            }
+         }
+
+         .communicate-call:hover{
+         	i{
+         		background-color: $color-call-chat-hover;
+         		transition: 0.5s;
+         	}
+         	span{
+         		color: $color-white;
+         		transition: 0.5s;
+         	}
+         }
+       	.communicate-chat{
+				width: 50%;
+				height: 30px;
+				overflow: hidden;
+				display: flex;
+            align-items: center;
+				a{
+       			span{
+       				color: $color-text-communicate;
+       				display: block;
+       				padding-top: 1px;
+       				font-size: $font-size-14;
+						font-weight: $font-weight-400;
+       			}
+       			i{
+       				display: block;
+       				color: $color-communicate-icons;
+       				float: left;
+       				font-size: 2.1rem;
+       				margin-left: 10px;
+					   margin-right: 10px;
+       			}
+       		}
+       	}
+
+       	.communicate-chat:hover{
+         	i{
+         		color: $color-call-chat-hover;
+         		transition: 0.5s;
+         	}
+         	span{
+         		color: $color-white;
+         		transition: 0.5s;
+         	}
+         }
+     	}
+	}
+	.psychics-description{
+		.psychics-like{
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+         color: $color-header-button;
+         text-align: center;
+         i{
+         	display: inline-block;
+          	margin-right: 6px;
+         }
+         i:nth-last-child(1){
+          	margin-right: 0;
+         }
+		}
+		.psychics-text{
+			text-align: center;
+			color: $color-psychics-bg;
+			font-size: $font-size-14;
+			font-weight: $font-weight-400;
+			line-height: $line-height-24;
+			span{
+				display: block;
+			}
+		}
+		.psychics-prise{
+			text-align: center;
+			overflow: hidden;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			padding-top: 2.5rem;
+			.psychics-prise-left{
+				float: left;
+				height: 49px;
+				overflow: hidden;
+				background-color: #7575a0;
+				padding: 8px 24px 6px 24px;
+				a{
+					color: $color-white;
+					font-size: $font-size-14;
+					font-weight: $font-weight-400;
+				}
+				a:hover{
+					color: $color-header-button;
+					transition: 0.5s;
+				}
+				span{
+				display: block;
+				}
+			}
+			.psychics-prise-right{
+				background-color: #3d3e60;
+				overflow: hidden;
+				height: 49px;
+				padding: 15px 28px 17px 12px;
+				a{
+					color: $color-header-button;
+					font-size: $font-size-16;
+				}
+				a:hover{
+					color: $color-white;
+					transition: 0.5s;
+				}
+			}
+		}
+	}
+}
+
+
+/*------------------------#popular-psychics----------------------------------*/
+
+#popular-psychics{
+	padding-bottom: 5rem;
+	.psychics-list{
+     padding-bottom: 5rem;
+	}
+	.psychics-btn{
+		text-align: center;
+		border: 1px solid #404163;
+		display: block;
+	   max-width: 408px;
+	   margin: 0 auto;
+	   padding: 1.8rem 12.2rem;
+		color: #444562;
+		font-size: $font-size-16;
+		font-weight: $font-weight-400;
+		background-color: $color-psychics-bg;
+		}
+		.psychics-btn:hover{
+			background-color: $color-psychics-cell;
+			color: $color-psychics-bg;
+			transition: 0.5s;
+		}
+}
+
+/*-----------------------#stories-------------------------------*/
+
+ #stories {
+ 	.stories-list{
+ 		padding-top: 3.6rem;
+ 		overflow: hidden;
+ 		display: flex;
+      justify-content: space-between;
+		
+  		.history{
+  			margin-right: 20px;
+     		.history-content{
+   			overflow: hidden;
+  				border-right: 1px solid #cecece;
+  			   border-left: 1px solid #cecece;
+  			   border-bottom: 2px solid #424363;
+  			   padding-bottom: 2rem;
+  			}
+  			.history-img{
+  				img{
+ 					width: 100%;
+ 				}
+ 			}
+ 			.history-text{
+ 				padding-left: 1.6rem;
+  				h3{
+  					margin-top: 1.8rem;
+  					margin-bottom: 1.8rem;
+  					a{
+  						color: $color-history-title;
+						font-family: $font-family-Halant;
+						font-size: $font-size-18;
+						font-weight: bold;
+  					}
+					a:hover{
+						color: $color-header-button;
+						transition: 0.5s;
+					}
+ 				}
+ 				p{
+					color: $color-description-section;
+					font-size: $font-size-14;
+					font-weight: $font-weight-400;
+					line-height: $line-height-22;
+ 				}
+ 			}
+ 			.history-date{
+ 				padding-top: 0.8rem;
+ 				padding-left: 1.6rem;
+ 				span{
+					color: $color-text-search;
+					font-size: $font-size-14;
+					font-weight: $font-weight-400;
+					font-style: italic;
+ 				}
+ 			}
+ 		}
+ 		.history:nth-last-child(1){
+ 			margin-right: 0;
+ 		}
+  	}
+}
+
+
+/*---------icons---------*/
+
+.icons-list{
+	max-width: 315px;
+	margin: 0 auto;
+	overflow: hidden;
+	display: flex;
+   justify-content: center;
+   padding-top: 6rem;
+   padding-bottom: 5rem;
+
+   a{
+		float: left;
+		margin-right: 1.4rem;
+   }
+  
+   a:nth-child(1){
+	  	width: 79px;
+	  	height: 44px;
+  		background:url('../img/icons.png') 0 0 no-repeat;
+   }
+   a:nth-child(2){
+  		width: 55px;
+	  	height: 44px;
+  		background:url('../img/icons.png') 0 -48px no-repeat;
+   }
+   a:nth-child(3){
+  		width: 90px;
+	  	height: 44px;
+  		background:url('../img/icons.png') 0 -94px no-repeat;
+  		margin-right: 0;
+   }
+
+}
+
+/*-------------------------#footer-----------------------------------*/
+
+#footer{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	background-color: $color-footer-bg;
+
+	.footer-top{
+		padding: 4.4rem 0 4.4rem 0;
+		overflow: hidden;
+		border-bottom: 1px solid $color-footer-top-border;
+		.footer-menu{
+			float: left;
+			padding-left: 0;
+			padding-right: 0;
+				ul{
+					padding: 0;
+					margin: 0;
+					text-align: justify;
+ 					overflow: hidden;
+ 					height: 18px;
+					li{
+						display: inline;
+		     			a{
+							display: inline-block;
+							color: $color-footer-menu;
+							font-size: $font-size-14;
+							font-weight: $font-weight-400;
+						}
+						a:hover{
+							color: $color-icons-footer;
+					      transition: 0.5s;
+						}
+						a:focus{
+					      text-decoration: none;
+					      color: $color-icons-footer;
+				      }
+					}
+				}
+				ul:after {
+					 content: "1";
+					 margin-left: 100%;
+					 display: inline-block;
+				}
+	   }
+
+
+	   .footer-menu-mobile{
+	      ul{
+				padding: 0;
+				margin: 0;
+				li{
+					display: block;
+					text-align: center;
+	     			a{
+						color: $color-footer-menu;
+						font-size: $font-size-14;
+						font-weight: $font-weight-400;
+						padding-left: 0;
+					   padding-right: 0;
+					   margin-bottom: 2rem;
+					}
+					a:hover{
+						color: $color-icons-footer;
+				      transition: 0.5s;
+					}
+					a:focus{
+				      text-decoration: none;
+				      color: $color-icons-footer;
+			      }
+				}
+			}
+	   }
+	   
+	.footer-social-networks{
+		overflow: hidden;
+		padding-right: 0;
+		text-align: right;
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				display: inline-block;
+				 list-style-type: none;
+				 margin-left: 16px;
+				a{
+			      font-size: $font-size-14;
+		      	color: $color-icons-footer;
+		   	}
+				a:hover{
+					color: $color-white;
+					transition: 0.5s;
+				}
+			}
+		}
+   }
+}
+	.footer-bot{
+		 padding: 1.9rem 0 1.9rem 0;
+		 overflow: hidden;
+		.payment-systems{
+			max-width: 205px;
+         float: right;
+   		ul{
+				overflow: hidden;
+				padding: 0;
+				margin-bottom: 0;
+				li{
+					cursor: pointer;
+					list-style-type: none;
+					float: left;
+					height: 22px;
+					width: 31px;
+					margin-left: 10px;
+					border-radius: 3px;
+				}
+
+            li:nth-child(1){
+					background: url('../img/system-1.png') 2px 8px no-repeat;
+					background-color: $color-white;
+
+				}
+				li:nth-child(2){
+					background: url('../img/system-2.png') 2px 4px no-repeat;
+					background-color: #3969bc;
+				}
+				li:nth-child(3){
+					background: url('../img/system-3.png') no-repeat;
+				}
+				li:nth-child(4){
+					background: url('../img/system-4.png') 0 5px no-repeat;
+					background-color: #3b7cbc;
+				}
+				li:nth-child(5){
+					background: url('../img/system-5.png') 2px 8px no-repeat;
+					background-color: $color-white;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*files*/
+@import "media.scss";
